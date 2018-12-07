@@ -1,0 +1,207 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css";
+@import "./assets/scss/_variables";
+
+/* vue-materialize  */
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme(
+  "default",
+  (
+    primary: $link-color,
+    // The primary color of your brand
+    accent: $link-color// The secondary color of your brand
+  )
+);
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+.md-switch .md-switch-container {
+  width: 30px !important;
+  min-width: 30px !important;
+}
+.md-switch .md-switch-thumb {
+  width: 14px !important;
+  height: 14px !important;
+}
+.md-field {
+  margin: 0px 0 5px !important;
+}
+
+/* ------------------------- */
+
+@font-face {
+  font-family: MuseoSansCyrl;
+  src: url(./assets/fonts/MuseoSansCyrl.ttf);
+}
+@font-face {
+  font-family: MuseoSansCyrl_500;
+  src: url(./assets/fonts/MuseoSansCyrl_500.ttf);
+}
+@font-face {
+  font-family: MuseoSansCyrl_700;
+  src: url(./assets/fonts/MuseoSansCyrl_700.ttf);
+}
+@font-face {
+  font-family: MuseoSansCyrl_900;
+  src: url(./assets/fonts/MuseoSansCyrl_900.ttf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html.md-theme-default {
+  background-color: #ffffff !important;
+}
+
+body {
+  font-family: MuseoSansCyrl !important;
+  color: $text-color;
+  font-size: 14px;
+  position: relative;
+  // display: grid;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+#app {
+  position: relative;
+  background-color: #ffffff;
+}
+h2,
+h3,
+b {
+  font-family: MuseoSansCyrl_700 !important;
+}
+
+* {
+  box-sizing: border-box;
+  &:active,
+  &:focus {
+    outline: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+button {
+  border: none;
+}
+
+a,
+a:hover {
+  text-decoration: underline !important;
+  color: $link-color !important;
+  font-family: MuseoSansCyrl_500 !important;
+}
+
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .v-spinner {
+    margin-top: -80px;
+  }
+}
+
+.articles {
+  .content_list > p {
+    line-height: 1.1rem;
+  }
+}
+.tag-news {
+  background-color: rgb(138, 110, 205);
+}
+.tag-post {
+  background-color: rgb(255, 191, 38);
+}
+.tag-about {
+  background-color: rgb(0, 255, 0);
+}
+.tag-stock {
+  background-color: rgb(0, 186, 218);
+}
+.marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.home,
+.contacts,
+.post {
+  position: fixed;
+  top: 100px;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+a.telelegram-bot {
+  color: $bot-color !important;
+}
+.md-switch {
+  margin: 10px 0 !important;
+}
+.md-switch label {
+  margin-bottom: 0 !important;
+}
+.link-more {
+  display: none;
+}
+.btn-vprimary {
+  width: 100%;
+  max-width: 220px;
+  background: $link-color;
+  color: #fff;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 40px;
+  padding: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "arial";
+  -webkit-box-shadow: 0px 20px 22px 0px rgba(97, 184, 38, 0.51);
+  box-shadow: 0px 20px 22px 0px rgba(97, 184, 38, 0.51);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+// transition animate
+.slide-fade-enter-active {
+  transition: all .5s ease;
+  opacity: 1;
+}
+.slide-fade-leave-active {
+  transition: all .5s ease;
+  transform: translateY(20px);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transition: all .5s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}

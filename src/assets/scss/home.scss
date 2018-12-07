@@ -1,0 +1,164 @@
+.project_name {
+    font-size: 100px;
+    line-height: 1.1;
+    font-family: "MuseoSansCyrl_900";
+    // background: -moz-gradient(linear, left top, left bottom, from(#f7af8c), to(#bb785f));
+    // background: -webkit-gradient(linear, left top, left bottom, from(#f7af8c), to(#bb785f));
+    background: linear-gradient(#f7af8c, #bb785f);
+    -webkit-background-clip: text;
+    // -moz-background-clip: text;
+    color: transparent;
+    padding-top: 20px; 
+  }
+
+  h2, h3 {
+    font-family: 'MuseoSansCyrl_700';
+    line-height: 1.1;
+  }
+
+  .title-home {
+    color: #000;
+    font-family: 'MuseoSansCyr_700';
+  }
+
+  .right_image {
+    height: 496px;
+    margin-left: 50px;
+  }
+
+  img {
+    max-width: none !important;
+  }
+
+  .search-block {
+    width: 100%;
+    max-width: 1235px;
+    margin: auto;
+    background: white;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    -webkit-box-shadow: 0px 47px 29px 0px rgba(209, 200, 175, 0.51);
+    box-shadow: 0px 47px 29px 0px rgba(209, 200, 175, 0.51);
+    position: relative;
+    z-index: 6;
+    padding: 20px;
+  
+    .search-block_context {
+      max-width: 992px;
+      line-height: 1rem;
+      & > div[class*="col-lg-3"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .input_name {
+        font-size: 0.7rem;
+      }
+    }
+    span.telegram_ico {
+      width: 20px;
+      height: 20px;
+      background-image: url("../assets/img/svg/telegram.svg");
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+    .border-left {
+      border-left: 1px solid #f3ebeb;
+    }
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      height: 28px;
+    }
+
+    .input_type {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #898c84e8;
+      font-family: "MuseoSansCyrl_700";
+      font-size: 1rem;
+      background-color: transparent;
+      border-radius: 0 !important;
+    }
+    .input_type:focus {
+      outline: none;
+      border-bottom: 1px solid #6bc02b;
+    }
+    .input_type:hover {
+      border-bottom: 1px solid #6bc02b;
+    }
+    .input_type option {
+      padding-left: 0;
+      font-family: "MuseoSansCyrl";
+      background: #fafafa;
+      padding: 20px 8px;
+    }
+    .input_type::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #ccc8c8;
+      font-family: "MuseoSansCyrl";
+    }
+    .input_type::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ccc8c8;
+      font-family: "MuseoSansCyrl";
+    }
+    .input_type::-ms-input-placeholder {
+      /* IE 10+ */
+      color: #ccc8c8;
+      font-family: "MuseoSansCyrl";
+    }
+    .input_type::-moz-placeholder {
+      /* Firefox 18- */
+      color: #ccc8c8;
+      font-family: "MuseoSansCyrl";
+    }
+  }
+  #map {
+    margin-top: -200px;
+    width: 100%;
+    height: 500px;
+  }
+  @media (max-width: 575px) {
+    .border-left {
+      border-left: none !important;
+    }
+    h1.project_name {
+      font-size: 2.5rem !important;
+    }
+    h2{
+      font-size: 1rem  !important;
+      line-height: 1.1  !important;
+    }
+  }
+  @media (max-width: 761px) {
+    .project_name {
+      font-size: 3rem !important;
+    }
+  }
+  @media (max-width: 991px) {
+    .border-left {
+      border-left: none !important;
+    }
+    .reserved_text {
+      font-size: 0.7rem;
+    }
+    .search-block_context > div {
+      margin-bottom: 20px;
+    }
+  }
