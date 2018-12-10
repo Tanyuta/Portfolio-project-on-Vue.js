@@ -1,15 +1,21 @@
 .project_name {
+   .project_name {
     font-size: 100px;
     line-height: 1.1;
     font-family: "MuseoSansCyrl_900";
-    // background: -moz-gradient(linear, left top, left bottom, from(#f7af8c), to(#bb785f));
-    // background: -webkit-gradient(linear, left top, left bottom, from(#f7af8c), to(#bb785f));
-    background: linear-gradient(#f7af8c, #bb785f);
-    -webkit-background-clip: text;
-    // -moz-background-clip: text;
-    color: transparent;
-    padding-top: 20px; 
-  }
+    color: #bb785f;
+    @supports (-webkit-background-clip: text) {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(#f7af8c, #bb785f);
+      background-image: -webkit-linear-gradient(#f7af8c, #bb785f);
+      background-image: -moz-linear-gradient(#f7af8c, #bb785f);
+      background-image: -o-linear-gradient(#f7af8c, #bb785f);
+      background-image: linear-gradient(#f7af8c, #bb785f);
+    }
+    padding-top: 20px;    
+  } 
+}
 
   h2, h3 {
     font-family: 'MuseoSansCyrl_700';
